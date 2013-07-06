@@ -15,4 +15,14 @@ define('PICO_DIR', MODULES_DIR . 'pico/');
 require PICO_DIR . 'vendor/autoload.php';
 require PICO_DIR . 'lib/pico.php';
 
+// Markdown :)
+spl_autoload_register(function($class) {
+	require MODULES_DIR . 'markdown/' . preg_replace('{\\\\|_(?!.*\\\\)}', DIRECTORY_SEPARATOR, ltrim($class, '\\')) . '.php';
+
+});
+
+function Markdown($text) {
+	return \Michelf\MarkdownExtra::defaultTransform($text);
+}
+
 new Pico();
