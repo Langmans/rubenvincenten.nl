@@ -4,11 +4,14 @@ error_reporting(-1);
 setlocale(LC_ALL, 'nl_NL.utf-8', 'nl.utf-8', 'nl_NL', 'nl', 'dutch', 'nld');
 
 define('ROOT_DIR', realpath(dirname(__FILE__)) . '/');
+define('CACHE_DIR', ROOT_DIR . 'cache/');
+
 define('CONTENT_DIR', ROOT_DIR . 'content/');
 define('CONTENT_EXT', '.md');
 
 define('PLUGINS_DIR', ROOT_DIR . 'plugins/');
 define('MODULES_DIR', ROOT_DIR . 'modules/');
+define('THEMES_DIR', ROOT_DIR . 'themes/');
 
 define('PICO_DIR', MODULES_DIR . 'pico/');
 
