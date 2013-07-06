@@ -1,6 +1,10 @@
 <?php
-
+session_start();
+ob_start();
 error_reporting(-1);
+
+
+define('DEBUG', true);
 setlocale(LC_ALL, 'nl_NL.utf-8', 'nl.utf-8', 'nl_NL', 'nl', 'dutch', 'nld');
 
 define('ROOT_DIR', realpath(dirname(__FILE__)) . '/');
@@ -23,7 +27,6 @@ spl_autoload_register(function($class) {
 	require MODULES_DIR . 'markdown/' . preg_replace('{\\\\|_(?!.*\\\\)}', DIRECTORY_SEPARATOR, ltrim($class, '\\')) . '.php';
 
 });
-
 function Markdown($text) {
 	return \Michelf\MarkdownExtra::defaultTransform($text);
 }
