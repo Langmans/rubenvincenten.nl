@@ -13,12 +13,13 @@
 	<link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,400,400italic,500,500italic,700,700italic,900,900italic&subset=latin,latin-ext'>
 	<link rel="stylesheet" type="text/css" href="{{ theme_url }}/css/style.css"  />
 	
-	<script src="{{ theme_url }}/js/modernizr.2.6.2.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+	<script src="{{ theme_url }}/js/script-ck.js"></script>
 </head>
 <body>
 
 	<header id="header">
-		<div class="inner clearfix">
+		<div class="inner">
 			<h1><a href="{{ base_url }}">{{ site_title }}</a></h1>
 			<ul class="nav">
 				{% for page in pages %}
