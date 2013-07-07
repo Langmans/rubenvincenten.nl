@@ -7,3 +7,6 @@
 [submodule "modules/lessphp"]
 	path = modules/lessphp
 	url = https://github.com/leafo/lessphp.git
+[submodule "modules/3l"]
+	path = modules/3l
+	url = https://github.com/mateuszkocz/3l/
