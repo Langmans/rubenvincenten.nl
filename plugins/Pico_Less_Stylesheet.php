@@ -1,5 +1,11 @@
 <?php
 
+// Disabled
+class Pico_Less_Stylesheet {
+	
+}
+return;
+
 /**
  * Checks if a less stylesheet exists and compiles it.
  *
@@ -70,7 +76,12 @@ class Pico_Less_Stylesheet {
 				}
 			}
 		} catch(Exception $e) {
-			die($e);
+			header($_SERVER['SERVER_PROTOCOL'] . ' 500 Internal Server Error');
+			echo '<pre>';
+			echo $e;
+			echo '</pre>';
+			die;
+			
 		}
 
 		return $newCache['compiled'];
